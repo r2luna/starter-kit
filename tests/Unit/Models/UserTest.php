@@ -7,7 +7,7 @@ namespace Tests\Models;
 use App\Models\User;
 use ReflectionMethod;
 
-test('cast', function () {
+test('cast', function (): void {
     $user = new User();
 
     $reflection = new ReflectionMethod($user, 'casts');
