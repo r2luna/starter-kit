@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38fadbde0220aa1728748e7e7b6d625d",
+    "content-hash": "4f3e83d6d1efdd2e7122377fb7debc1f",
     "packages": [
         {
             "name": "brick/math",
@@ -1056,16 +1056,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v11.42.1",
+            "version": "v11.43.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "ff392f42f6c55cc774ce75553a11c6b031da67f8"
+                "reference": "053f26afb699c845945e7380b407dd019a0a2c74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ff392f42f6c55cc774ce75553a11c6b031da67f8",
-                "reference": "ff392f42f6c55cc774ce75553a11c6b031da67f8",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/053f26afb699c845945e7380b407dd019a0a2c74",
+                "reference": "053f26afb699c845945e7380b407dd019a0a2c74",
                 "shasum": ""
             },
             "require": {
@@ -1267,7 +1267,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-02-12T20:58:18+00:00"
+            "time": "2025-02-19T16:06:03+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -6538,35 +6538,35 @@
         },
         {
             "name": "laradumps/laradumps",
-            "version": "v3.5.1",
+            "version": "4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laradumps/laradumps.git",
-                "reference": "956917e0a30b04935c3655597012c8d0181a281f"
+                "reference": "75dc20df473a14271714e3b76393702c364849dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laradumps/laradumps/zipball/956917e0a30b04935c3655597012c8d0181a281f",
-                "reference": "956917e0a30b04935c3655597012c8d0181a281f",
+                "url": "https://api.github.com/repos/laradumps/laradumps/zipball/75dc20df473a14271714e3b76393702c364849dd",
+                "reference": "75dc20df473a14271714e3b76393702c364849dd",
                 "shasum": ""
             },
             "require": {
-                "illuminate/mail": "^10.0|^11.0",
-                "illuminate/support": "^10.0|^11.0",
-                "laradumps/laradumps-core": "^2.4",
+                "illuminate/mail": "^10.0|^11.0|^12.0",
+                "illuminate/support": "^10.0|^11.0|^12.0",
+                "laradumps/laradumps-core": "3.x-dev",
                 "nunomaduro/termwind": "^1.15.1|^2.0.1",
                 "php": "^8.1"
             },
             "require-dev": {
-                "larastan/larastan": "^2.9.8|^3.0",
-                "laravel/framework": "^10.0|^11.21",
+                "laravel/framework": "^10.0|^11.21|^12.0",
                 "laravel/pint": "^1.17.2",
                 "livewire/livewire": "^3.5.6",
                 "mockery/mockery": "^1.6.12",
-                "orchestra/testbench-core": "^8.0|^9.4",
-                "pestphp/pest": "^2.35.1",
+                "orchestra/testbench-core": "^8.0|^9.4|^10.0",
+                "pestphp/pest": "^2.35.1|^3.7.0",
                 "symfony/var-dumper": "^6.4.0|^7.1.3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -6598,7 +6598,7 @@
             "homepage": "https://github.com/laradumps/laradumps",
             "support": {
                 "issues": "https://github.com/laradumps/laradumps/issues",
-                "source": "https://github.com/laradumps/laradumps/tree/v3.5.1"
+                "source": "https://github.com/laradumps/laradumps/tree/v4.0.0-beta1"
             },
             "funding": [
                 {
@@ -6606,20 +6606,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-16T16:46:35+00:00"
+            "time": "2025-02-17T11:23:18+00:00"
         },
         {
             "name": "laradumps/laradumps-core",
-            "version": "v2.4.5",
+            "version": "3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laradumps/laradumps-core.git",
-                "reference": "b1f083e84e9275026a21ca6effa219dd16cce20a"
+                "reference": "cc277aab0eaaa3566f1be0ab9530d3ec821ff896"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laradumps/laradumps-core/zipball/b1f083e84e9275026a21ca6effa219dd16cce20a",
-                "reference": "b1f083e84e9275026a21ca6effa219dd16cce20a",
+                "url": "https://api.github.com/repos/laradumps/laradumps-core/zipball/cc277aab0eaaa3566f1be0ab9530d3ec821ff896",
+                "reference": "cc277aab0eaaa3566f1be0ab9530d3ec821ff896",
                 "shasum": ""
             },
             "require": {
@@ -6640,6 +6640,7 @@
                 "pestphp/pest": "^2.28.1",
                 "phpstan/phpstan": "^1.10.50"
             },
+            "default-branch": true,
             "bin": [
                 "bin/laradumps"
             ],
@@ -6667,7 +6668,7 @@
             "homepage": "https://github.com/laradumps/laradumps-core",
             "support": {
                 "issues": "https://github.com/laradumps/laradumps-core/issues",
-                "source": "https://github.com/laradumps/laradumps-core/tree/v2.4.5"
+                "source": "https://github.com/laradumps/laradumps-core/tree/v3.0.0-beta1"
             },
             "funding": [
                 {
@@ -6675,7 +6676,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-16T16:25:50+00:00"
+            "time": "2025-02-15T18:57:20+00:00"
         },
         {
             "name": "larastan/larastan",
@@ -7998,16 +7999,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "c00d78fb6b29658347f9d37ebe104bffadf36299"
+                "reference": "9b30d6fd026b2c132b3985ce6b23bec09ab3aa68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/c00d78fb6b29658347f9d37ebe104bffadf36299",
-                "reference": "c00d78fb6b29658347f9d37ebe104bffadf36299",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/9b30d6fd026b2c132b3985ce6b23bec09ab3aa68",
+                "reference": "9b30d6fd026b2c132b3985ce6b23bec09ab3aa68",
                 "shasum": ""
             },
             "require": {
@@ -8039,9 +8040,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.0.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.1.0"
             },
-            "time": "2024-10-13T11:29:49+00:00"
+            "time": "2025-02-19T13:28:12+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -9808,8 +9809,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {},
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "laradumps/laradumps": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

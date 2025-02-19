@@ -18,7 +18,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
-        "laradumps/laradumps": "^3.0",
+        "laradumps/laradumps": "4.x-dev",
         "larastan/larastan": "^3.0",
         "laravel/pail": "^1.1",
         "laravel/pint": "^1.13",
@@ -76,6 +76,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
