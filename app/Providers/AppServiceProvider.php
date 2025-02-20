@@ -5,6 +5,7 @@ declare(strict_types = 1);
 namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Opcodes\LogViewer\Facades\LogViewer;
 use Override;
@@ -27,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->setupLogViewer();
         $this->configModels();
+        $this->configCommands();
     }
 
     /**
@@ -52,5 +54,16 @@ class AppServiceProvider extends ServiceProvider
         // --
         // Make sure that all properties being called exists in the model
         Model::shouldBeStrict();
+    }
+
+    /**
+     * Configures database commands to prohibit execution of destructive statements
+     * when the application is running in a production environment.
+     */
+    private function configCommands(): void
+    {
+        DB::prohibitDestructiveCommands(
+            app()->isProduction()
+        );
     }
 }
