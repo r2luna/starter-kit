@@ -18,16 +18,8 @@ class User extends Authenticatable implements Auditable
     use HasFactory;
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+        'name', 'email'];
 
     /**
      * The attributes that should be hidden for serialization.
