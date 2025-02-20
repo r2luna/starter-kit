@@ -4,7 +4,9 @@ declare(strict_types = 1);
 
 namespace App\Providers;
 
+use Carbon\CarbonImmutable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
@@ -31,6 +33,7 @@ class AppServiceProvider extends ServiceProvider
         $this->configModels();
         $this->configCommands();
         $this->configUrls();
+        $this->configDate();
     }
 
     /**
@@ -69,8 +72,19 @@ class AppServiceProvider extends ServiceProvider
         );
     }
 
+    /**
+     * Configures the application URLs to enforce HTTPS protocol for all routes.
+     */
     private function configUrls(): void
     {
         URL::forceHttps();
+    }
+
+    /**
+     * Configures the application to use CarbonImmutable for date and time handling.
+     */
+    private function configDate(): void
+    {
+        Date::use(CarbonImmutable::class);
     }
 }
