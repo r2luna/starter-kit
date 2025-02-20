@@ -6,6 +6,7 @@ namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Opcodes\LogViewer\Facades\LogViewer;
 use Override;
@@ -29,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
         $this->setupLogViewer();
         $this->configModels();
         $this->configCommands();
+        $this->configUrls();
     }
 
     /**
@@ -65,5 +67,10 @@ class AppServiceProvider extends ServiceProvider
         DB::prohibitDestructiveCommands(
             app()->isProduction()
         );
+    }
+
+    private function configUrls(): void
+    {
+        URL::forceHttps();
     }
 }
