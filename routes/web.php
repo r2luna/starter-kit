@@ -2,7 +2,11 @@
 
 declare(strict_types = 1);
 
+use App\Enums\Can;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+
+ds()->queriesOn();
 
 Route::get('/', fn () => view('welcome'))->name('welcome');
 Route::get(
@@ -15,3 +19,6 @@ Route::get(
         return $user;
     }
 );
+
+Route::get('/user/{user}', fn (User $user) => $user)
+    ->can(Can::CreateUser->value);

@@ -7,6 +7,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use OwenIt\Auditing\Contracts\Auditable;
@@ -17,9 +18,6 @@ class User extends Authenticatable implements Auditable
     /** @use HasFactory<UserFactory> */
     use HasFactory;
     use Notifiable;
-
-    protected $fillable = [
-        'name', 'email'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -43,5 +41,15 @@ class User extends Authenticatable implements Auditable
             'password'          => 'hashed',
             'is_admin'          => 'boolean',
         ];
+    }
+
+    public function permissions(): BelongsToMany
+    {
+        return $this->belongsToMany(Permission::class);
+    }
+
+    public function roles(): BelongsToMany
+    {
+        return $this->belongsToMany(Role::class);
     }
 }
