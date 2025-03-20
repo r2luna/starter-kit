@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
-it('should be able to login', function () {
+it('should be able to login', function (): void {
     $user = User::factory()->create();
 
     Login::dispatch([
@@ -19,7 +19,7 @@ it('should be able to login', function () {
         ->and(Auth::id())->toBe($user->id);
 });
 
-it('it should add user to the payload', function () {
+it('it should add user to the payload', function (): void {
     $user = User::factory()->create();
 
     $task = Login::dispatchSync([
@@ -30,8 +30,8 @@ it('it should add user to the payload', function () {
     expect($task->payload)->user->id->toBe($user->id);
 });
 
-describe('validations', function () {
-    it('should require an email', function () {
+describe('validations', function (): void {
+    it('should require an email', function (): void {
         $this->expectException(ValidationException::class);
 
         Login::dispatch([
@@ -39,7 +39,7 @@ describe('validations', function () {
         ]);
     });
 
-    it('should require a password', function () {
+    it('should require a password', function (): void {
         $this->expectException(ValidationException::class);
 
         Login::dispatch([
@@ -47,7 +47,7 @@ describe('validations', function () {
         ]);
     });
 
-    it('should require a valid email format', function () {
+    it('should require a valid email format', function (): void {
         $this->expectException(ValidationException::class);
 
         Login::dispatch([
@@ -56,7 +56,7 @@ describe('validations', function () {
         ]);
     });
 
-    it('should fail with invalid credentials', function () {
+    it('should fail with invalid credentials', function (): void {
         $user = User::factory()->create();
 
         try {

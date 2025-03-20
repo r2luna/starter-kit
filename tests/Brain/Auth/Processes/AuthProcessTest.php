@@ -6,7 +6,7 @@ use App\Brain\Auth\Processes\AuthProcess;
 use App\Brain\Auth\Tasks\Login;
 use App\Brain\Auth\Tasks\LogLogin;
 
-test('check if auth process has all the tasks', function () {
+test('check if auth process has all the tasks', function (): void {
     $process = new AuthProcess([]);
 
     expect($process->getTasks())
