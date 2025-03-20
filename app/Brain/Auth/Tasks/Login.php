@@ -16,6 +16,7 @@ use Illuminate\Validation\ValidationException;
  * @property-read string $password
  *
  * @property User $user
+ * @property string $ip
  */
 class Login extends Task
 {
@@ -31,6 +32,7 @@ class Login extends Task
         }
 
         $this->user = Auth::user();
+        $this->ip   = request()->ip();
 
         return $this;
     }

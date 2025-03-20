@@ -12,15 +12,14 @@ use Illuminate\Contracts\Queue\ShouldQueue;
  * Task LogLogin
  *
  * @property-read User $user
+ * @property-read string $ip
  */
 class LogLogin extends Task implements ShouldQueue
 {
-    protected string $feature = 'auth.v1';
-
     public function handle(): self
     {
         $this->user->logins()->create([
-            'ip' => request()->ip(),
+            'ip' => $this->ip,
         ]);
 
         return $this;
