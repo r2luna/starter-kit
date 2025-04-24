@@ -18,5 +18,6 @@ test('cast', function (): void {
     expect($casts)->toBe([
         'email_verified_at' => 'datetime',
         'password'          => 'hashed',
+        'is_admin'          => 'boolean',
     ]);
 });
